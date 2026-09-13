@@ -82,13 +82,17 @@
             </button>
         </div>
         <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-            <div class="navbar-nav gap-2 align-items-lg-center">
-                <button class="custom-nav-btn active-tab" data-tab="dashboard" onclick="switchTab('dashboard', this)"><i class="fa-solid fa-chart-pie me-1"></i> Dashboard</button>
-                <button class="custom-nav-btn" data-tab="disruptions" onclick="switchTab('disruptions', this)"><i class="fa-solid fa-triangle-exclamation me-1"></i> Disruption ID</button>
-                <button class="custom-nav-btn" data-tab="routes" onclick="switchTab('routes', this)"><i class="fa-solid fa-route me-1"></i> AI Re-routing</button>
-                <button class="custom-nav-btn" data-tab="fleet" onclick="switchTab('fleet', this)"><i class="fa-solid fa-truck-fast me-1"></i> Fleet Redeploy</button>
-                <button class="custom-nav-btn" data-tab="coldchain" onclick="switchTab('coldchain', this)"><i class="fa-solid fa-temperature-arrow-up me-1"></i> Cold Chain IoT</button>
-            </div>
+           <div class="navbar-nav gap-2 align-items-lg-center">
+    <!-- Nav tabs -->
+    <button class="custom-nav-btn active-tab" data-tab="dashboard" onclick="switchTab('dashboard', this)"><i class="fa-solid fa-chart-pie me-1"></i> Dashboard</button>
+    <button class="custom-nav-btn" data-tab="disruptions" onclick="switchTab('disruptions', this)"><i class="fa-solid fa-triangle-exclamation me-1"></i> Disruption ID</button>
+    <button class="custom-nav-btn" data-tab="routes" onclick="switchTab('routes', this)"><i class="fa-solid fa-route me-1"></i> AI Re-routing</button>
+    <button class="custom-nav-btn" data-tab="fleet" onclick="switchTab('fleet', this)"><i class="fa-solid fa-truck-fast me-1"></i> Fleet Redeploy</button>
+    <button class="custom-nav-btn" data-tab="coldchain" onclick="switchTab('coldchain', this)"><i class="fa-solid fa-temperature-arrow-up me-1"></i> Cold Chain IoT</button>
+
+
+    <button class="custom-nav-btn text-danger" onclick="logout()"><i class="fa-solid fa-right-from-bracket me-1"></i> Logout</button>
+</div>
         </div>
     </nav>
 
@@ -439,6 +443,13 @@
                 }
             });
         };
+
+        function logout() {
+    if (confirm("Are you sure you want to logout?")) {
+        // Jyare login page banavelu hoy tyare tya redirect karvu, jeman index.html
+        window.location.href = "index.html"; 
+    }
+}
     </script>
 
     <!-- Bootstrap JS Bundle -->
